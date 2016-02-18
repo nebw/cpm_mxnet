@@ -31,14 +31,15 @@ CPM_ForceOnlyOneModuleVersion()
 CPM_InitModule(${CPM_MODULE_NAME})
 
 #------------------------------------------------------------------------------
-# Caffe
+# MXNet
 #------------------------------------------------------------------------------
 
 set(USE_OPENCV ON)
 set(USE_CUDNN OFF)
 set(USE_CUDA OFF)
+
 if(NOT DEFINED MXNET_COMMIT)
-    set(MXNET_COMMIT "6ff10478eb7f6ec007e0a3a6c2705c03a71ad15a")
+    set(MXNET_COMMIT "a1b07486f70486659ff3f78f673bc21024549238")
 endif()
 
 if(NOT DEFINED MXNET_GIT_REPO)
@@ -54,5 +55,6 @@ CPM_EnsureRepoIsCurrent(
   USE_CACHING TRUE
 )
 CPM_ExportAdditionalIncludeDir("${REPO_SOURCE_DIR}/include")
+CPM_ExportAdditionalLibraryTarget(mxnet)
 
-add_subdirectory("${REPO_SOURCE_DIR}" "${CMAKE_CURRENT_BINARY_DIR}")
+add_subdirectory("${REPO_SOURCE_DIR}" "{CMAKE_CURRENT_BINARY_DIR}/3rdParty/build/mxnet}")
