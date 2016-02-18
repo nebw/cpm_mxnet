@@ -34,6 +34,9 @@ CPM_InitModule(${CPM_MODULE_NAME})
 # Caffe
 #------------------------------------------------------------------------------
 
+set(USE_OPENCV ON)
+set(USE_CUDNN OFF)
+set(USE_CUDA OFF)
 if(NOT DEFINED MXNET_COMMIT)
     set(MXNET_COMMIT "6ff10478eb7f6ec007e0a3a6c2705c03a71ad15a")
 endif()
