@@ -58,3 +58,4 @@ CPM_ExportAdditionalIncludeDir("${REPO_SOURCE_DIR}/include")
 CPM_ExportAdditionalLibraryTarget(mxnet)
 
 add_subdirectory("${REPO_SOURCE_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/3rdParty/build/mxnet}")
+set_property(TARGET mxnet APPEND_STRING PROPERTY COMPILE_FLAGS " -w")
