@@ -57,4 +57,4 @@ CPM_EnsureRepoIsCurrent(
 CPM_ExportAdditionalIncludeDir("${REPO_SOURCE_DIR}/include")
 CPM_ExportAdditionalLibraryTarget(mxnet)
 
-add_subdirectory("${REPO_SOURCE_DIR}" "{CMAKE_CURRENT_BINARY_DIR}/3rdParty/build/mxnet}")
+add_subdirectory("${REPO_SOURCE_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/3rdParty/build/mxnet}")
