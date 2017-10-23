@@ -34,9 +34,9 @@ CPM_InitModule(${CPM_MODULE_NAME})
 # MXNet
 #------------------------------------------------------------------------------
 
-set(USE_OPENCV ON)
-set(USE_CUDNN OFF)
-set(USE_CUDA OFF)
+set(USE_OPENCV OFF)
+#set(USE_CUDNN OFF)
+#set(USE_CUDA OFF)
 
 if(NOT DEFINED MXNET_COMMIT)
     set(MXNET_COMMIT "118b37e9ea9b49c2c1bb9fbf3c82411591523ba5")
